@@ -1,0 +1,17 @@
+<% for(var writer=0; writer < users.length; writer++){%>
+<tr>
+    <td><%=writer + 1 %></td>
+    <td><%=users[writer].name %></td>
+    <td><%=users[writer].email %></td>
+    <td><%=users[writer].gender %></td>
+    <td><%=users[writer].status %></td>
+    <td>
+        <a href="/update-user?id=<%=users[writer]._id%>" class="btn border-alt-user update">
+            <span class="text-gradient"><i class="fa-solid fa-pen"></i></span>
+        </a>
+        <a class="btn border-del-user delete" data-id=<%=users[writer]._id%>>
+            <span class="text-gradient"><i class="fa-solid fa-xmark"></i></span>
+        </a>
+    </td>
+</tr> 
+<% } %>
